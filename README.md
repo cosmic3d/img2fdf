@@ -11,4 +11,4 @@
 3. The program will generate the corresponding .fdf map file in the `output` folder.
 
 ```shell
-$ python3 img2fdf.py path/to/image.png
+python3 img2fdf.py path/to/image.png
