@@ -18,13 +18,13 @@ def generate_fdf_map(image_path):
     return fdf_map.strip()
 
 def save_fdf_file(image_path, fdf_content):
-    base_path = os.path.dirname(image_path)
-    file_name = os.path.splitext(os.path.basename(image_path))[0]
-    output_folder = os.path.join(base_path, "output")
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    output_folder = os.path.join(script_dir, "output")
 
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 
+    file_name = os.path.splitext(os.path.basename(image_path))[0]
     output_file = os.path.join(output_folder, "{}.fdf".format(file_name))
 
     with open(output_file, "w") as f:
@@ -32,7 +32,7 @@ def save_fdf_file(image_path, fdf_content):
 
 # Ejemplo de uso
 while True:
-    input_image = input("Path to the image (or 'exit' to quit): ")
+    input_image = input("Path to the image with file extension (or 'exit' to quit): ")
     if input_image.lower() == "exit":
         break
 
