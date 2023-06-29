@@ -10,8 +10,8 @@ def generate_fdf_map(image_path):
     for y in range(height):
         for x in range(width):
             r, g, b = img.getpixel((x, y))
-            color_hex = f"0x{r:02X}{g:02X}{b:02X}"
-            fdf_map += f"0,{color_hex} "
+            color_hex = "0x{:02X}{:02X}{:02X}".format(r, g, b)
+            fdf_map += "0,{} ".format(color_hex)
 
         fdf_map += "\n"
 
@@ -25,7 +25,7 @@ def save_fdf_file(image_path, fdf_content):
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 
-    output_file = os.path.join(output_folder, f"{file_name}.fdf")
+    output_file = os.path.join(output_folder, "{}.fdf".format(file_name))
 
     with open(output_file, "w") as f:
         f.write(fdf_content)
