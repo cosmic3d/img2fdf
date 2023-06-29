@@ -11,4 +11,14 @@
 3. The program will generate the corresponding .fdf map file in the `output` folder.
 
 ```shell
-python3 img2fdf.py path/to/image.png
+python3 img2fdf.py
+```
+
+## Requirements
+
+- Python 3.6 or above
+- PIL (Python Imaging Library) package
+Use this command to install all the requirements:
+```shell
+pip3 install -r requirements.txt
+```
