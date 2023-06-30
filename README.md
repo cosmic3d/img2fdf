@@ -2,7 +2,7 @@
 
 ## What is img2fdf?
 
-`img2fdf` is a Python program that converts an image into a .fdf map file. Each pixel of the image is represented as a point in the map, with its corresponding color assigned in hexadecimal format. The resulting .fdf map can be used in various applications that require color mapping.
+`img2fdf` is a Python program that converts an image into a .fdf map file, which you can run in the [FilDeFer](https://github.com/cosmic3d/ft_fdf) 42 campus project. Each pixel of the image is represented as a point in the map, with its corresponding color assigned in hexadecimal format. The resulting .fdf map can be used in various applications that require color mapping.
 
 ## How to Use
 
@@ -18,7 +18,8 @@ python3 img2fdf.py
 
 - Python 3.6 or above
 - PIL (Python Imaging Library) package
-Use this command to install all the requirements:
+
+Run this command on the project folder to install all the requirements:
 ```shell
 pip3 install -r requirements.txt
 ```
